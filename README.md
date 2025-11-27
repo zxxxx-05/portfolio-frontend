@@ -4,8 +4,8 @@ A modern, elegant React-based portfolio website with blog functionality. Built w
 
 ## Live Demo
 
-- **Frontend URL**: [Your deployed frontend URL here]
-- **Backend API**: [Your deployed API URL here]
+- **Frontend URL**: https://portfolio-frontend-p0m1ix0bl-wqeqweqweqweqs-projects.vercel.app
+- **Backend API**: https://portfolio-backend-hgygo4lip-wqeqweqweqweqs-projects.vercel.app
 
 ## Features
 
@@ -83,7 +83,7 @@ portfolio-frontend/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/zxxxx-05/portfolio-frontend.git
 cd portfolio-frontend
 ```
 
@@ -104,6 +104,21 @@ npm run dev
 
 The application will be running at `http://localhost:5173`
 
+### Connecting to the Backend API
+
+**For local development:**
+1. Make sure the backend API is running locally at `http://localhost:5000`
+2. Set the environment variable in `.env`:
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+**For production:**
+Update the `.env` file with the deployed API URL:
+```env
+VITE_API_URL=https://portfolio-backend-hgygo4lip-wqeqweqweqweqs-projects.vercel.app/api
+```
+
 ### Building for Production
 
 ```bash
@@ -119,15 +134,6 @@ The build output will be in the `dist` folder.
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `VITE_API_URL` | Backend API base URL | `http://localhost:5000/api` |
-
-### Connecting to Backend
-
-Make sure your backend API is running and the `VITE_API_URL` environment variable points to the correct URL.
-
-For production, update the `.env` file with your deployed API URL:
-```env
-VITE_API_URL=https://your-api-url.com/api
-```
 
 ## Features Overview
 
@@ -176,23 +182,14 @@ Key CSS variables:
 
 ## Deployment
 
-This frontend can be deployed to:
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS Amplify
+This frontend is deployed on Vercel.
 
-### Vercel Deployment
+### Deploy to Vercel
 
 1. Install Vercel CLI: `npm i -g vercel`
 2. Run: `vercel`
-3. Follow the prompts and set environment variables
-
-### Netlify Deployment
-
-1. Build the project: `npm run build`
-2. Drag and drop the `dist` folder to Netlify
-3. Set environment variables in Netlify dashboard
+3. Follow the prompts and set environment variables:
+   - `VITE_API_URL`: Your backend API URL
 
 ## License
 
